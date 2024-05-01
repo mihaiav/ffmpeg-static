@@ -218,11 +218,10 @@ download \
   "https://github.com/xiph/speex/archive/"
 
 download \
-  "n6.0.tar.gz" \
-  "ffmpeg6.0.tar.gz" \
-  "586ca7cc091d26fd0a4c26308950ca51" \
-  "https://github.com/FFmpeg/FFmpeg/archive"
-
+  "v7.tar.gz" \
+  "" \
+  "" \
+  "https://github.com/mihaiav/FFmpeg/archive/refs/tags/"
 download \
   "SDL2-2.0.22.tar.gz" \
   "SDL2-2.0.22.tar.gz" \
