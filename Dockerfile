@@ -1,7 +1,6 @@
 FROM ubuntu:noble
 
 # Basic packages needed to download dependencies and unpack them.
-RUN apk add --no-cache aws-cli
 RUN apt-get update && apt-get install -y \
   git \
   bzip2 \
@@ -11,7 +10,6 @@ RUN apt-get update && apt-get install -y \
   xz-utils \
   && rm -rf /var/lib/apt/lists/*
 
-RUN aws --version
 # Install packages necessary for compilation.
 RUN apt-get update && apt-get install -y \
   meson \
@@ -52,6 +50,7 @@ RUN apt-get update && apt-get install -y \
 COPY build.sh download.pl env.source fetchurl /ffmpeg-static/
 RUN cd /ffmpeg-static/ && ./build.sh -j4
 RUN ls /ffmpeg-static/bin/
+RUN upload.sh
 VOLUME /ffmpeg-static
 WORKDIR /ffmpeg-static
 CMD /bin/bash
