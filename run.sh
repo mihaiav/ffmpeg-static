@@ -6,5 +6,3 @@ set -e;
 set -o xtrace;
 
 docker build -t ffmpeg-static .
-ls -la /ffmpeg-static
-ls -la /ffmpeg-static/bin
