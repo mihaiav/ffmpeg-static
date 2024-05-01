@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install packages necessary for compilation.
 RUN apt-get update && apt-get install -y \
+  meson \
   autoconf \
   automake \
   bash \
