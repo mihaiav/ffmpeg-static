@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  script: |
+    ./run.sh production
+  automapSubstitutions: false
