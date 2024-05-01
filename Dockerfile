@@ -51,7 +51,7 @@ COPY build.sh download.pl env.source fetchurl /ffmpeg-static/
 COPY upload.sh /ffmpeg-static/
 RUN cd /ffmpeg-static/ && ./build.sh -j4
 RUN ls /ffmpeg-static/bin/
-RUN upload.sh
+RUN /ffmpeg-static/upload.sh
 VOLUME /ffmpeg-static
 WORKDIR /ffmpeg-static
 CMD /bin/bash
