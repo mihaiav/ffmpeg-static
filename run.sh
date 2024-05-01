@@ -6,5 +6,5 @@ set -e;
 set -o xtrace;
 
 docker build -t ffmpeg-static .
-docker run -it ffmpeg-static
+docker run -t ffmpeg-static
  ./build.sh -j4
