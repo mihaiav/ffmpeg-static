@@ -1,6 +1,7 @@
 FROM ubuntu:noble
 
 # Basic packages needed to download dependencies and unpack them.
+RUN apk add --no-cache aws-cli
 RUN apt-get update && apt-get install -y \
   git \
   bzip2 \
@@ -10,6 +11,7 @@ RUN apt-get update && apt-get install -y \
   xz-utils \
   && rm -rf /var/lib/apt/lists/*
 
+RUN aws --version
 # Install packages necessary for compilation.
 RUN apt-get update && apt-get install -y \
   meson \
