@@ -218,7 +218,7 @@ download \
   "https://github.com/xiph/speex/archive/"
 
 download \
-  "v8.null" \
+  "v8.null.tar.gz" \
   "" \
   "" \
   "https://github.com/mihaiav/FFmpeg/archive/refs/tags/"
